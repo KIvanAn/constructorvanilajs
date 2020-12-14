@@ -1,7 +1,8 @@
 import image from './assets/img/example.jpg'
+import {Block} from './classes/blocks'
 
 export const model = [
-    {type: 'title', value: 'Constructor sites on pure JS', options: {
+    new Block('title', 'Constructor sites on pure JS', {
         tag: 'h2',
         styles: {
             background: 'linear-gradient(to right, #ff0099, #493240)',
@@ -9,8 +10,8 @@ export const model = [
             padding: '1.5rem',
             'text-align': 'center'
         }
-    }},
-    {type: 'text', value: 'Lorem ipsum custom words!!!', options: {
+    }),
+    new Block('text', 'Lorem ipsum custom words!!!', {
         tag: 'p',
         styles: {
             background: 'linear-gradient(to right, blue, green)',
@@ -19,12 +20,12 @@ export const model = [
             'text-align': 'center',
             padding: '10px 0 0 0'
         }
-    }},
-    {type: 'columns', value: [
+    }),
+    new Block('columns', [
         '1.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem corrupti, dolore harum ad autem iure fugiat facere, aut officia ex molestias excepturi inventore similique dignissimos nulla tempore vitae dolorum.',
         '2.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem corrupti, dolore harum ad autem iure fugiat facere, aut officia ex molestias excepturi inventore similique dignissimos nulla tempore vitae dolorum.',
         '3.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quidem corrupti, dolore harum ad autem iure fugiat facere, aut officia ex molestias excepturi inventore similique dignissimos nulla tempore vitae dolorum.'
-    ], options: {
+    ], {
         styles: {
             background: 'linear-gradient(to right, red, purple)',
             color: '#fff',
@@ -32,8 +33,8 @@ export const model = [
             'text-align': 'center',
             padding: '10px'
         }
-    }},
-    {type: 'image', value: image, options: {
+    }),
+    new Block('image', image, {
         styles: {
             '--bs-gutter-x': '0'
         },
@@ -42,5 +43,5 @@ export const model = [
             height: 'auto'
         },
         alt: 'Main image site'
-    }}
+    })
 ]
